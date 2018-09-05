@@ -31,17 +31,6 @@ p {
 			<input name="author" id="author" type="text" />
 		</div>
 	</fieldset>
-<!--	<fieldset>
-		<legend>Subjects</legend>
-		<select name="subject" form="tutor">
-			<option value="french" />French</option>
-			<option value="spanish" />Spanish</option>
-			<option value="chemistry" />Chemistry</option>
-			<option value="computers" />Computers</option>
-			<option value="english" />English</option>
-		</select>
-	</fieldset>
-!--> 
 	<div>
 		<input type="submit" value="submit" />
 	</div>
