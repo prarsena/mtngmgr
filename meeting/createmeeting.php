@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "meetingmanager");
+$link = mysqli_connect("localhost", "root", "root", "meetingmanager");
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -12,22 +12,21 @@ echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
 mysqli_select_db($link, "meetingmanager");
 
-$topic= mysqli_real_escape_string($link, $_POST['topic']);
-$time= mysqli_real_escape_string($link, $_POST['time']);
-$author= mysqli_real_escape_string($link, $_POST['author']);
+$name= mysqli_real_escape_string($link, $_POST['name']);
+$date= mysqli_real_escape_string($link, $_POST['date']);
+$host= mysqli_real_escape_string($link, $_POST['host']);
 
+$order = "INSERT INTO meeting
 
-$order = "INSERT INTO topic
-
-        (topic, time, author)
+        (name, date, host)
 
         VALUES
 
-        ('".$topic."',
-
-        '".$time."',
+        ('".$name."',
         
-        '".$author."' )";
+        '".$date."',
+
+        '".$host."')";
 
 
 $result = mysqli_query($link, $order);
@@ -42,6 +41,6 @@ if($result){
 
 }
 
-echo "<br><a href='index.php'>Return to Index</a><br>";
-echo "<br><a href='view.php'>View all tutors</a>";
+echo "<br><a href='index.php'>New meeting</a><br>";
+echo "<br><a href='view.php'>View meetings</a>";
 ?>

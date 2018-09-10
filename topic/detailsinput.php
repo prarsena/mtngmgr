@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "meetingmanager");
+$link = mysqli_connect("localhost", "root", "root", "meetingmanager");
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -29,6 +29,7 @@ if($result){
 
 }
 
-echo "<br><a href='index.php'>Return to Index</a><br>";
 echo "<br><a href='view.php'>View all topics</a>";
+echo "<br><a href='index.php'>Return to Submit topics</a><br>";
+
 ?>

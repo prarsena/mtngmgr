@@ -1,33 +1,12 @@
 <html>
-<head><title>Topic Database Contents!</title></head>
-<style>
-body {
-    background-color: lightblue;
-}
+<head><title>Topic Database Contents!</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-table {
-	text-align: center;
-	margin-left:auto; 
-	margin-right:auto; 
-}
-</style>
 <body>
 <h1>Topic Database</h1>
 <?php
-$connection = mysqli_connect('localhost', 'root', '', 'meetingmanager'); //The Blank string is the password
+$connection = mysqli_connect('localhost', 'root', 'root', 'meetingmanager'); //The Blank string is the password
 $query = "SELECT * FROM topic"; //You don't need a ; like you do in SQL
 $result = mysqli_query($connection, $query);
 

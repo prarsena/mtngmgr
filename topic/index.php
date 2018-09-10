@@ -1,20 +1,12 @@
-<html><head><title>Meetingmngr</title></head><body>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Meetingmngr</title>
+</head>
+
+<body>
 <h1>Add Topic to Database</h1>
-<style>
-body {
-    background-color: lightblue;
-}
 
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-    }
-</style>
 <form method="post" action="input.php" id="topic">
 	<input type="hidden" value="index.php" />
 	<fieldset>
